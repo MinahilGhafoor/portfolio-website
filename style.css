@@ -1,0 +1,155 @@
+/* Magic, beautiful, and modern styles for a portfolio website */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary: #7f5af0;
+    --secondary: #2cb67d;
+    --background: #16161a;
+    --surface: #242629;
+    --text: #fffffe;
+    --muted: #94a1b2;
+    --accent: #f5d547;
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--background) 60%, var(--primary) 100%);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    transition: background 0.5s;
+}
+
+header {
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 16px var(--primary), 0 1px 1px var(--accent);
+}
+
+header p {
+    color: var(--muted);
+    font-size: 1.25rem;
+}
+
+nav {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text);
+    background: var(--primary);
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(127, 90, 240, 0.2);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background: var(--secondary);
+    color: var(--background);
+    transform: translateY(-3px) scale(1.05);
+}
+
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: rgba(36, 38, 41, 0.95);
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--primary);
+    padding-left: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(127, 90, 240, 0.15);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44, 182, 125, 0.18);
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--text);
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(127, 90, 240, 0.2);
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    color: var(--background);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--muted);
+    background: var(--surface);
+    border-top: 2px solid var(--primary);
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    section {
+        padding: 1.5rem 0.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
