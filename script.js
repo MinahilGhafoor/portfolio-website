@@ -46,3 +46,8 @@ function toggleMusic() {
   const music = document.getElementById("bg-music");
   music.muted = !music.muted;
 }
+
+window.addEventListener("click", () => {
+  const music = document.getElementById("bg-music");
+  music.play();
+});
