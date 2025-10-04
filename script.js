@@ -41,3 +41,8 @@ function typeHeader() {
   }
 }
 typeHeader();
+
+function toggleMusic() {
+  const music = document.getElementById("bg-music");
+  music.muted = !music.muted;
+}
